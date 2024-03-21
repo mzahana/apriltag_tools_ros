@@ -27,7 +27,7 @@ class AprilTagConverter(Node):
         
         self.publisher_ = self.create_publisher(
             PoseArray,
-            'out/pose_array',  
+            'apriltags/pose_array',  
             10)
 
     def tag_callback(self, msg):
