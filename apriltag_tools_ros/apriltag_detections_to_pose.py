@@ -40,7 +40,7 @@ class AprilTagConverter(Node):
                 timeout=rclpy.duration.Duration(seconds=1.0))
         except TransformException as ex:
             self.get_logger().error(
-            f'[AprilTagConverter::tag_callback] Could not transform from {msg.header.frame_id} to {self.reference_frame_} : {ex}')
+            f'[AprilTagConverter::tag_callback] Could not transform from {msg.header.frame_id} to {self.reference_frame_id_} : {ex}')
             return
         
         pose_array_msg = PoseArray()
