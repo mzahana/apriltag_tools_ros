@@ -44,7 +44,7 @@ class AprilTagConverter(Node):
             return
         
         pose_array_msg = PoseArray()
-        pose_array_msg.header = msg.header
+        pose_array_msg.header = self.reference_frame_id_
         for detection in msg.detections:
             pose_msg = Pose()
             pose_msg.position = detection.pose.pose.pose.position
