@@ -53,7 +53,7 @@ class AprilTagConverter(Node):
             transformed_pose_msg = self.transform_pose(pose_msg, transform)
             pose_array_msg.poses.append(transformed_pose_msg)
         
-        self.publisher.publish(pose_array_msg)
+        self.publisher_.publish(pose_array_msg)
 
     def transform_pose(self, pose: Pose, tr: TransformStamped) -> Pose:
         """
